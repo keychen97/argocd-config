@@ -4,6 +4,10 @@ metadata:
   name: fastapi-app
   namespace: argocd
 spec:
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
   project: default
   source:
     repoURL: https://github.com/keychen97/argocd-config.git
